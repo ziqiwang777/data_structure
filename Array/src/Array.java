@@ -1,3 +1,5 @@
+import apple.laf.JRSUIConstants;
+
 import java.time.chrono.MinguoDate;
 import java.util.Arrays;
 import java.util.Objects;
@@ -48,18 +50,19 @@ public class Array<Element> {
 
         if(size == data.length){
             //need to extend the array
-            throw new IllegalArgumentException("AddLast failed. Array is full");
-        }else {
-            if (index < 0 || index > size) {
-                throw new IllegalArgumentException("AddLast failed. Array is full");
-            } else {
-                for (int i = size - 1; i >= index; i--) {
-                    data[i + 1] = data[i];
-                }
-                data[index] = e;
-                size++;
-            }
+            resize(2*data.length);
         }
+
+        if (index < 0 || index > size) {
+            throw new IllegalArgumentException("AddLast failed. Array is full");
+        } else {
+            for (int i = size - 1; i >= index; i--) {
+                data[i + 1] = data[i];
+            }
+            data[index] = e;
+            size++;
+        }
+
 
     }
 
@@ -143,6 +146,9 @@ public class Array<Element> {
             }
             size--;
             data[size] = null;
+            if(size == data.length/4 && data.length/2 != 0){
+                resize(data.length/2);
+            }
             return ret;
         }
     }
@@ -192,6 +198,18 @@ public class Array<Element> {
         return res.toString();
     }
 
+
+
+
+    private void resize(int newcapacity){
+        Element[] newdata = (Element[]) new Object[newcapacity];
+
+        for(int i = 0;i<size;i++){
+            newdata[i] = data[i];
+
+        }
+        data = newdata;
+    }
 }
 
 
