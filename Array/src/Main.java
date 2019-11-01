@@ -21,31 +21,36 @@ public class Main {
 //            System.out.println(score);
 //        }
 
-        Array arr = new Array(20);
+        Array<Integer> arr = new Array<Integer>(20);
+        System.out.println(arr);
+
         for (int i = 0;i < 10; i++){
             arr.addlast(i);
         }
+        System.out.println(arr);
+
         arr.addlast(4);
+        System.out.println(arr);
+
         arr.set(2,4);
+        System.out.println(arr);
+
 
         System.out.println(arr);
 
 
         System.out.println(arr.find(4));
-//        System.out.println(arr);
 
-        int[] a = arr.findAll(11);
+//        int[] a = arr.findAll(11);
 
 
-        for(int i : a){
-            System.out.println(i);
-        }
-//        System.out.println(arr);
+//        for(int i : a){
+//            System.out.println(i);
+//        }
 
-        arr.removeAllElement(4);
+//        arr.removeAllElement(4);
         System.out.println(arr);
-//        arr.removeElement(4);
-//        System.out.println(arr);
+
 
 
 
