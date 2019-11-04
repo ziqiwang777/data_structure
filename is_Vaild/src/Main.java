@@ -3,12 +3,8 @@ import java.util.Stack;
 
 public class Main {
 
-    public static void main(String[] args) {
 
 
-
-
-    }
 
     public boolean isVaild(String s){
         Stack<Character> stack = new Stack<>();
@@ -23,6 +19,7 @@ public class Main {
                 if (stack.isEmpty()){
                     return false;
                 }
+
                 char topchar = stack.pop();
 
                 if (topchar =='{' && c != '}'){
@@ -38,4 +35,12 @@ public class Main {
 
         return stack.isEmpty();
     }
+    public static void main(String[] args) {
+
+        System.out.println(new Main().isVaild("[("));
+        System.out.println(new Main().isVaild("[({})]"));
+
+    }
+
+
 }
