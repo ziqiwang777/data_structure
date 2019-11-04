@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5274f185-4fdf-4829-ba66-30dce958a9d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Stack/src/Array.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Queue/src/Array.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,6 +75,7 @@
       <workItem from="1572530700826" duration="14540000" />
       <workItem from="1572606952106" duration="1258000" />
       <workItem from="1572701944307" duration="21000" />
+      <workItem from="1572842651921" duration="13000" />
     </task>
     <servers />
   </component>
